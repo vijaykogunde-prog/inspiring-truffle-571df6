@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonatal Pneumothorax: Clinical Simulator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #app-container {
+            background: #ffffff;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        h1, h2 {
+            color: #1a365d;
+            margin-top: 0;
+        }
+        .content {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #2b6cb0;
+        }
+        .btn-danger {
+            background-color: #e53e3e;
+            text-align: center;
+        }
+        .btn-danger:hover {
+            background-color: #c53030;
+        }
+        .btn-success {
+            background-color: #38a169;
+            text-align: center;
+        }
+        .btn-success:hover {
+            background-color: #2f855a;
+        }
+        .feedback-banner {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .fail-bg {
+            background-color: #fff5f5;
+            color: #c53030;
+            border: 2px solid #feb2b2;
+        }
+        .success-bg {
+            background-color: #f0fff4;
+            color: #2f855a;
+            border: 2px solid #9ae6b4;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+    </div>
+
+<script>
+    const story = {
+        start: {
+            title: "Module 1: Recognition & Initial Assessment",
+            text: "You are paged urgently to the NICU. A 28-week gestation infant (weight 1100g) on conventional ventilation has suddenly deteriorated. You observe grunting, tachypnoea, unequal air entry, asymmetrical chest movements, tachycardia, and a sudden fall in blood pressure[cite: 40, 41, 42, 43, 44, 45]. What is your immediate first step?",
+            type: "question",
+            choices: [
+                { text: "Order a stat Chest X-Ray (CXR) to formally diagnose the problem.", next: "fail_cxr_initial" },
+                { text: "Assess using the DOPE mnemonic and perform bedside transillumination.", next: "step_2" }
+            ]
+        },
+        fail_cxr_initial: {
+            title: "Clinical Error",
+            text: "CXR confirms diagnosis but is strictly for stable babies[cite: 60]. If the infant is cardiovascularly compromised, do NOT wait for imaging[cite: 60]. Maintain high suspicion for sudden deterioration in ventilated infants[cite: 38].",
+            type: "fail",
+            backTo: "start"
+        },
+        step_2: {
+            title: "Module 2: The Critical Decision",
+            text: "Correct. You run the DOPE mnemonic (Displacement, Obstruction, Pneumothorax, Equipment)[cite: 46, 47, 48, 49, 50, 51, 52]. Transillumination is positive[cite: 64]. However, oxygenation and cardiovascular system (CVS) remain unstable[cite: 69]. What is your next intervention?",
+            type: "question",
+            choices: [
+                { text: "Order an urgent CXR to confirm before doing an invasive procedure.", next: "fail_cxr_unstable" },
+                { text: "Do NOT wait for imaging. Proceed directly to urgent thoracocentesis.", next: "step_3" }
+            ]
+        },
+        fail_cxr_unstable: {
+            title: "CRITICAL ERROR",
+            text: "Tension pneumothorax is an immediate, life-threatening emergency[cite: 16]. There is insufficient time to gain parental consent; waiting will delay life-saving procedures[cite: 32].",
+            type: "fail",
+            backTo: "step_2"
+        },
+        step_3: {
+            title: "Module 3: Emergency Thoracocentesis",
+            text: "Correct. Thoracocentesis provides immediate emergency decompression[cite: 76]. Where is your precise anatomical target for needle insertion?",
+            type: "question",
+            choices: [
+                { text: "4th or 5th intercostal space, mid or anterior axillary line.", next: "fail_target_needle" },
+                { text: "2nd or 3rd intercostal space, mid-clavicular line, directly over the top of the rib.", next: "step_4" }
+            ]
+        },
+        fail_target_needle: {
+            title: "Incorrect Anatomical Target",
+            text: "The 4th or 5th intercostal space in the mid or anterior axillary line is the target for a definitive chest drain[cite: 96], not for emergency needle thoracocentesis.",
+            type: "fail",
+            backTo: "step_3"
+        },
+        step_4: {
+            title: "Module 4: Chest Drain Sizing",
+            text: "Correct. You insert the needle over the top of the rib (2nd/3rd intercostal space, mid-clavicular line)[cite: 79]. The tension is relieved. Now you must place a chest drain. The infant weighs 1100g. Which drain size is appropriate?",
+            type: "question",
+            choices: [
+                { text: "8Fr (Pigtail) or 10Fr (Trocar).", next: "fail_size" },
+                { text: "6Fr (Pigtail) or 8Fr (Trocar).", next: "step_5" }
+            ]
+        },
+        fail_size: {
+            title: "Incorrect Drain Size",
+            text: "According to the Drain Sizing Chart, 8Fr (Pigtail) or 10Fr (Trocar) drains are for Infants > 1500g[cite: 95].",
+            type: "fail",
+            backTo: "step_4"
+        },
+        step_5: {
+            title: "Module 5: Chest Drain Target",
+            text: "Correct. You select a 6Fr (Pigtail) or 8Fr (Trocar) for an infant < 1500g[cite: 95]. You target the 4th or 5th intercostal space in the mid or anterior axillary line[cite: 96]. How do you navigate the rib?",
+            type: "question",
+            choices: [
+                { text: "Insert below the rib.", next: "fail_rib" },
+                { text: "Insert above the rib.", next: "step_6" }
+            ]
+        },
+        fail_rib: {
+            title: "High Risk of Complication",
+            text: "You must insert above the rib to avoid intercostal vessels[cite: 97].",
+            type: "fail",
+            backTo: "step_5"
+        },
+        step_6: {
+            title: "Module 6: Seldinger Technique",
+            text: "Correct. You execute the Seldinger Approach[cite: 109]. You make an incision and insert the needle until air is obtained[cite: 110]. What is the next step?",
+            type: "question",
+            choices: [
+                { text: "Advance dilator over the needle.", next: "fail_seldinger" },
+                { text: "Advance soft J-end of wire 5cm into the chest, then remove needle.", next: "step_7" }
+            ]
+        },
+        fail_seldinger: {
+            title: "Procedural Error",
+            text: "You must advance the soft J-end of wire 5cm into the chest and remove the needle BEFORE using the dilator[cite: 111, 112, 113].",
+            type: "fail",
+            backTo: "step_6"
+        },
+        step_7: {
+            title: "Module 7: Securement & Verification",
+            text: "Correct. The drain is inserted. How do you secure it and verify position?",
+            type: "question",
+            choices: [
+                { text: "Anchor with purse-string sutures, order mandatory AP CXR.", next: "fail_secure" },
+                { text: "Anchor with Steristrips and Tegaderm, order mandatory lateral CXR.", next: "end" }
+            ]
+        },
+        fail_secure: {
+            title: "Incorrect Post-Procedure Protocol",
+            text: "Avoid purse-string sutures to prevent scarring[cite: 143]. The end point for all interventions is a Lateral CXR to confirm drain position[cite: 73, 145].",
+            type: "fail",
+            backTo: "step_7"
+        },
+        end: {
+            title: "Simulation Complete! 🎉",
+            text: "Excellent work! You anchored the drain snugly with Steristrips and a transparent sterile dressing (Tegaderm)[cite: 142]. You confirmed the end point with a lateral CXR[cite: 73]. You have successfully managed a neonatal tension pneumothorax according to the Imperial Neonatal Service Guidelines.",
+            type: "success",
+            choices: [
+                { text: "Restart Simulation", next: "start" }
+            ]
+        }
+    };
+
+    const container = document.getElementById('app-container');
+
+    function renderNode(nodeId) {
+        const node = story[nodeId];
+        container.innerHTML = ''; // Clear current content
+
+        // Render Title
+        const title = document.createElement('h2');
+        title.innerText = node.title;
+        container.appendChild(title);
+
+        // Render Banner for Success/Fail
+        if (node.type === 'fail') {
+            const banner = document.createElement('div');
+            banner.className = 'feedback-banner fail-bg';
+            banner.innerText = "⚠️ " + node.text;
+            container.appendChild(banner);
+        } else if (node.type === 'success') {
+            const banner = document.createElement('div');
+            banner.className = 'feedback-banner success-bg';
+            banner.innerText = "✅ " + node.text;
+            container.appendChild(banner);
+        } else {
+            // Render standard text
+            const content = document.createElement('div');
+            content.className = 'content';
+            content.innerHTML = node.text; // using innerHTML to allow cite brackets if needed
+            container.appendChild(content);
+        }
+
+        // Render Buttons
+        if (node.type === 'question' || node.type === 'success') {
+            node.choices.forEach(choice => {
+                const btn = document.createElement('button');
+                btn.className = node.type === 'success' ? 'btn btn-success' : 'btn';
+                btn.innerText = choice.text;
+                btn.onclick = () => renderNode(choice.next);
+                container.appendChild(btn);
+            });
+        }
+
+        // Render Back Button for Failures
+        if (node.type === 'fail') {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-danger';
+            btn.innerText = "Acknowledge & Try Again";
+            btn.onclick = () => renderNode(node.backTo);
+            container.appendChild(btn);
+        }
+    }
+
+    // Start the app
+    renderNode('start');
+</script>
+
+</body>
+</html>
