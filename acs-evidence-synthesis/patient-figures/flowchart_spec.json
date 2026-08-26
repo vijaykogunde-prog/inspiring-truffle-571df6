@@ -1,0 +1,24 @@
+{
+  "figsize": [12.5, 7.2],
+  "xlim": [0, 12.5],
+  "ylim": [0, 7.6],
+  "nodes": [
+    {"id": "A", "x": 2.3, "y": 6.6, "w": 4.0, "h": 1.15, "label": "Your doctor thinks your\nbaby might arrive early", "fill": "#E3F3F1", "edge": "#1B7A72", "textcolor": "#0F4C4C", "bold": true, "size": 12},
+    {"id": "B", "x": 2.3, "y": 4.9, "w": 4.0, "h": 1.15, "label": "You are given the first\ninjection (arm, thigh or\nbottom)", "fill": "#FFFFFF", "edge": "#1B7A72", "textcolor": "#0F4C4C", "size": 11.5},
+    {"id": "C", "x": 2.3, "y": 3.2, "w": 4.2, "h": 1.15, "label": "Has your baby arrived\nin the next 12-24 hours?", "fill": "#FFFFFF", "edge": "#1B7A72", "textcolor": "#0F4C4C", "size": 11.5},
+    {"id": "D1", "x": 9.3, "y": 4.1, "w": 4.4, "h": 1.15, "label": "NOT YET - you may be given\na second injection", "fill": "#FCEFE1", "edge": "#C9791C", "textcolor": "#7A4A0F", "size": 11.5},
+    {"id": "D2", "x": 9.3, "y": 2.3, "w": 4.4, "h": 1.15, "label": "ALREADY BORN - the first\ninjection has already\nstarted helping", "fill": "#E3F3F1", "edge": "#1B7A72", "textcolor": "#0F4C4C", "size": 11.5},
+    {"id": "E", "x": 5.7, "y": 0.85, "w": 7.3, "h": 1.15, "label": "Even one injection helps your baby - the neonatal team will\nalways know exactly what you were given, and when", "fill": "#1B7A72", "edge": "#0F4C4C", "textcolor": "white", "bold": true, "size": 11.8}
+  ],
+  "edges": [
+    {"from": "A", "to": "B", "color": "#1B7A72", "linewidth": 2.0},
+    {"from": "B", "to": "C", "color": "#1B7A72", "linewidth": 2.0},
+    {"from": "C", "to": "D1", "color": "#1B7A72", "linewidth": 2.0},
+    {"from": "C", "to": "D2", "color": "#1B7A72", "linewidth": 2.0},
+    {"from": "D1", "to": "E", "color": "#1B7A72", "linewidth": 2.0},
+    {"from": "D2", "to": "E", "color": "#1B7A72", "linewidth": 2.0}
+  ],
+  "notes": [
+    {"x": 6.5, "y": 7.35, "text": "What happens, step by step", "size": 15, "color": "#0F4C4C"}
+  ]
+}
