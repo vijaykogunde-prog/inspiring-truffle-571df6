@@ -1,0 +1,39 @@
+{
+  "figsize": [13, 12],
+  "xlim": [0, 13],
+  "ylim": [0, 15.5],
+  "nodes": [
+    {"id": "A", "x": 6.5, "y": 15.0, "w": 6.8, "h": 0.8, "label": "Preterm birth anticipated within 7 days\n(24+0-33+6 weeks; consider 34+0-36+6 if high risk)", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "bold": true, "size": 10.5},
+    {"id": "B", "x": 6.5, "y": 13.6, "w": 5.4, "h": 0.9, "label": "Chorioamnionitis suspected\nor confirmed?", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864"},
+    {"id": "C1", "x": 2.6, "y": 12.1, "w": 4.4, "h": 1.0, "label": "YES: give ACS but do NOT\ndelay delivery to complete\nthe course (ref Q3)", "fill": "white", "edge": "#C55A11", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "C2", "x": 10.4, "y": 12.1, "w": 4.0, "h": 0.9, "label": "NO: proceed to\nstandard dosing", "fill": "white", "edge": "#548235", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "D", "x": 6.5, "y": 10.5, "w": 6.4, "h": 1.1, "label": "Give first dose now, regardless of how\nimminent delivery appears - a partial course\nreduces risk versus none (ref Q2)", "fill": "darkblue", "edge": "#1F4E79", "textcolor": "white", "bold": true, "size": 10},
+    {"id": "E1", "x": 2.4, "y": 8.7, "w": 4.6, "h": 1.3, "label": "Dexamethasone\n6 mg IM x4, 12-hourly\n(24 mg total)\nPREFERRED / most\ntrial-tested regimen", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "E2", "x": 10.6, "y": 8.7, "w": 4.6, "h": 1.3, "label": "Betamethasone\n11.4-12 mg IM x2, 24-hourly\n(22.8-24 mg total)\nCheck local preparation:\nphosphate/acetate mix required", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "F", "x": 6.5, "y": 6.8, "w": 6.6, "h": 1.1, "label": "Continue scheduled doses even if delivery\nis expected within the hour - no evidence\nof harm; omission not proven safe (ref Q2/Q6)", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "G", "x": 6.5, "y": 5.2, "w": 5.0, "h": 0.9, "label": "Course completed before birth?", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864"},
+    {"id": "H1", "x": 2.3, "y": 3.6, "w": 4.0, "h": 1.2, "label": "NO - document as\nINCOMPLETE course\n(state agent, dose, doses\ngiven, interval to birth)", "fill": "grey", "edge": "#808080", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "H2", "x": 6.5, "y": 3.6, "w": 3.6, "h": 1.1, "label": "Different agent given\nfor 2nd dose?", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "H3", "x": 10.7, "y": 3.6, "w": 3.6, "h": 1.0, "label": "YES - document as\nCOMPLETE course", "fill": "green", "edge": "#548235", "textcolor": "white", "bold": true, "size": 9.5},
+    {"id": "I", "x": 6.5, "y": 1.9, "w": 5.6, "h": 1.2, "label": "YES - document as MIXED / non-standard\ncourse; manage as incomplete for clinical\nand counselling purposes (ref Q5)", "fill": "pink", "edge": "#C00000", "textcolor": "#1F3864", "size": 9.5},
+    {"id": "J", "x": 6.5, "y": 0.5, "w": 8.4, "h": 0.9, "label": "Repeat course? Only if <34+0 weeks, still high risk of imminent birth,\nand >=7 days since first course - maximum 2 courses total (ref Q7)", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 9.5}
+  ],
+  "edges": [
+    {"from": "A", "to": "B"},
+    {"from": "B", "to": ["C1", "C2"]},
+    {"from": "C1", "to": "D"},
+    {"from": "C2", "to": "D"},
+    {"from": "D", "to": ["E1", "E2"]},
+    {"from": "E1", "to": "F"},
+    {"from": "E2", "to": "F"},
+    {"from": "F", "to": "G"},
+    {"from": "G", "to": ["H1", "H2"]},
+    {"from": "H2", "to": ["I", "H3"]},
+    {"from": "H1", "to": "J"},
+    {"from": "H3", "to": "J"},
+    {"from": "I", "to": "J"}
+  ],
+  "notes": [
+    {"x": 6.5, "y": 14.3, "text": "GA outside 24+0-36+6 weeks: manage individually, outside this pathway", "italic": true, "size": 9}
+  ]
+}
