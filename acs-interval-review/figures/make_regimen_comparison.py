@@ -38,8 +38,8 @@ cards = [
         "interval": "every 12 hours",
         "n": "x2 doses",
         "total": "24 mg total",
-        "evidence": "No RCT\nNo guideline endorsement\nNo SPC licence identified\n(0 studies of this exact\nregimen for efficacy or\nsafety)",
-        "color": RED, "fill": LIGHTRED, "stamp": "NOT EVIDENCE-BASED", "stampcolor": RED,
+        "evidence": "No RCT vs the 24-hourly\nalternative (Regimen B)\nNo guideline endorsement\n2 small RCTs use this exact\nregimen directly (vs placebo;\nvs Regimen A) - neither\ntests it against Regimen B",
+        "color": RED, "fill": LIGHTRED, "stamp": "NOT TESTED VS 24-HOURLY", "stampcolor": RED,
     },
 ]
 
@@ -68,12 +68,13 @@ for ax, c in zip(axes, cards):
     ax.text(0.5, 0.11, c["stamp"], ha="center", va="center", fontsize=11.5, fontweight="bold",
             color="white", transform=ax.transAxes, zorder=3)
 
-fig.suptitle("Three dexamethasone regimens in global use — only two have ever been tested",
-              fontsize=15.5, color=NAVY, fontweight="bold", y=1.01)
+fig.suptitle("Three dexamethasone regimens in global use — only two have ever been tested against each other",
+              fontsize=14.5, color=NAVY, fontweight="bold", y=1.01)
 fig.text(0.5, -0.02,
-         "Regimen C combines the per-dose amount of Regimen B with the interval of Regimen A. This specific combination\n"
-         "has never been the subject of a randomised trial, cohort study, or named guideline recommendation, in any jurisdiction identified.",
-         ha="center", fontsize=9.5, color="#555555", style="italic")
+         "Regimen C combines the per-dose amount of Regimen B with the interval of Regimen A. Two small RCTs have now been identified that use\n"
+         "Regimen C directly (Sukarna 2021 vs Regimen A; Shittu 2024 vs placebo) - but neither, nor any other study identified, compares it against\n"
+         "Regimen B at 24 hours, and no guideline names it. The specific interval question this document addresses remains untested.",
+         ha="center", fontsize=9.2, color="#555555", style="italic")
 
 plt.tight_layout(rect=[0, 0.02, 1, 0.96])
 style.save(fig, "/home/user/inspiring-truffle-571df6/acs-interval-review/figures/fig1_three_regimens.png")
