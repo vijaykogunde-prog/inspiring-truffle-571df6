@@ -62,6 +62,14 @@ These six were flagged in the brief as "already verified this session" during sc
 - **Hits:** 20 papers returned
 - **Notes:** This surfaced the core preterm CGM trial literature independently verified above (Battaglini 2026, Galderisi 2017, REACT/Beardsall 2021, Galderisi Cochrane review, Gutiérrez-Rosa 2026, Jagła 2019, Win 2021 [JCEM, CGM in persistent hypoglycaemia/CHI — attempted PMID resolution via targeted PubMed search failed to resolve; not extracted, logged to could-not-verify], Tottman 2017) plus a substantial amount of maternal/pregnancy CGM literature (gestational diabetes glycaemic control — out of scope for this domain, which concerns neonatal not maternal glycaemia) that was screened out.
 
+## Follow-up session — full abstract retrieval for synthesis writing (2026-08-27, continuation)
+
+The prior agent's search work above was not repeated. This continuation session's only PubMed activity was retrieving full abstract text (not previously captured verbatim in this log) for PMIDs already identified above, needed to transcribe exact figures into `03-synthesis/domain-D-preterm.md` without re-deriving numbers.
+
+- **Call:** `get_article_metadata(["10190926","39707054","40609275","28916591","33577770","41984740","34931697"])`
+- **Result:** 7/7 resolved (no silent drops). Full abstracts retrieved and exact figures transcribed for: Duvanel 1999 (PMID 10190926), Palazzo 2024 (PMID 39707054), Palazzo/Correani 2025 (PMID 40609275), Galderisi 2017 (PMID 28916591), REACT/Beardsall 2021 (PMID 33577770), Battaglini 2026 (PMID 41984740), and the current-edition Galderisi Cochrane review (PMID 34931697). No new PMIDs surfaced by this call — all seven were already logged above.
+- **Win 2021 (JCEM, CGM in persistent hypoglycaemia/CHI):** no further PMID-resolution attempt made this session; remains unresolved and is logged to `05-references/could-not-verify-domain-D.md`.
+
 ## Directness/evidence-gap conclusion carried into synthesis
 
 Across D1–D5 (five searches, ~247 raw PubMed hits plus 40 Consensus results, all screened), **no randomised controlled trial testing a specific glucose treatment threshold against a long-term neurodevelopmental outcome in infants <32 weeks (let alone <28 weeks) gestation was identified.** The CGM trials identified (Galderisi 2017, REACT 2021, Battaglini 2026) are RCTs of a *monitoring modality* in preterm infants, not RCTs of a *glucose threshold*; only Battaglini 2026 reports a long-term (2-year) neurodevelopmental outcome at all, and it is a single-centre trial of 53 infants, underpowered for that outcome. This is reported plainly as a confirmed evidence gap in the synthesis, not a search failure — see 03-synthesis/domain-D-preterm.md §(d).
