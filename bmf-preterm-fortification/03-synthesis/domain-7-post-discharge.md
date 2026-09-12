@@ -1,0 +1,35 @@
+# Domain 7 — Post-discharge / home fortification
+
+The brief specifically requires two distinct interventions to be kept separate: **"nutrient-enriched formula"** trials (relevant to formula-fed infants, a different product entirely) and **"continue HMF at home on human milk"** trials (the genuine post-discharge fortification-of-breast-milk question). This synthesis maintains that separation throughout, as the two are frequently conflated in secondary sources.
+
+## (a) What the evidence shows, and how consistent it is
+
+**The formula-based literature (a different intervention).** The Cochrane review of nutrient-enriched formula following hospital discharge (Young/Walsh et al. 2016, CD004696.pub5; PMID 27958643, 16 RCTs, 1251 infants) found that "postdischarge formula" (~74 kcal/100mL) versus standard term formula showed no consistent growth effect, while "preterm formula" (~80 kcal/100mL) versus standard term formula showed higher growth rates through infancy (roughly 500g weight, 5–10mm length, 5mm head circumference differences at 12–18 months, moderate-certainty per Cochrane's own GRADE), with few trials assessing neurodevelopment and no differences detected in those that did. This entire literature concerns infants fed **formula**, not breastfed infants continuing fortified human milk, and should never be cited as evidence for or against continuing HMF at home.
+
+**The genuine "continue HMF at home" literature.** Three studies directly address this question, and their findings are consistent in pointing away from a growth benefit while suggesting other possible benefits.
+
+Zachariassen et al. (2011; PMID 21402642, n=207 randomised of a 320-infant cohort, Denmark) randomised fortified versus unfortified mother's milk from shortly before discharge to 4 months corrected age in very preterm infants (24–32 weeks) and found **no significant difference** in weight, length or head circumference at 12 months corrected age between the fortified and unfortified breastfed groups, nor any significant effect on breastfeeding duration. A non-randomised formula-fed comparison group grew larger than both breastfed groups by 12 months, particularly in boys — a finding about breast milk versus formula generally, not about fortification.
+
+Marino et al. (2018; PMID 30552093), a UK quality-improvement project at a single tertiary surgical neonatal unit, found that introducing home use of "BMF" (the brief's colloquial breast-milk-fortifier sense, explicitly flagged here per the `bmf_terminology_check` requirement, and distinct from the bovine-fortifier sense used elsewhere in this brief) was associated with improved growth trajectory (change-in-SD-score) at discharge and at 1 year compared with a historical pre-QI baseline cohort, and was judged safe and acceptable to parents. This is a before-after QI audit without a concurrent control group, so the improvement cannot be confidently attributed to the intervention alone rather than secular practice change over the study period — useful for feasibility and safety, not for efficacy inference.
+
+Lamport et al. (2023; PMID 38072151, retrospective cohort, USA) compared continuing commercial HMF at home (n=92) against a historical comparison group using post-discharge formula-based enrichment (n=35), finding significantly higher human-milk exclusivity rates in the HMF-continuation group at both outpatient follow-up visits (83% vs 39% at first visit; 27% vs 6% at second visit) with **no significant difference in growth** (Fenton z-scores) between strategies. This is a genuinely informative nuance: the apparent benefit of continuing HMF at home, on this evidence, may be *preserving breastfeeding/human-milk-feeding rates* rather than accelerating growth.
+
+Klamer et al.'s 6-year IQ finding (2022; PMID 35807888, detailed fully in Domain 5) belongs here as well: post-discharge fortification of mother's own milk did not improve full-scale IQ or any neurodevelopmental subdomain compared with unfortified mother's milk at 6 years corrected age — the longest-follow-up, most clinically important null finding in this entire domain.
+
+An evidence-mapping review spanning both intervention types (Teller et al. 2016; PMID 26499034, 31 studies, no meta-analysis) found that nutrient-enriched post-discharge diets generally show no negative effects and frequently improve growth at some point, particularly in boys, but that neurodevelopmental improvements are rarely seen — a heterogeneity-characterisation finding, not a fortification-specific pooled effect size, and one that mixes the two intervention types the brief requires kept separate.
+
+## (b) Mechanistic rationale
+
+The post-discharge period is nutritionally distinct from the in-hospital period: infants are typically growing faster relative to their remaining nutrient reserves, feeding volumes and patterns are less tightly controlled than in a monitored NICU setting, and the practical question shifts from "does fortification work" to "can a fortification strategy be sustained at home without displacing breastfeeding itself" — which is precisely the trade-off Lamport's finding highlights.
+
+## (c) What has been tried
+
+Randomised (Zachariassen: fortified vs unfortified mother's milk) and non-randomised/QI (Marino, Lamport: HMF-continuation vs formula-based alternatives) designs have both been used; no identified trial in this space specifically stratifies by AEDF/REDF, post-NEC, or extremely-preterm subgroup status.
+
+## (d) Where the evidence fails to settle the question
+
+The consistent signal across Zachariassen (RCT, null on growth), Lamport (retrospective, null on growth, positive on breastfeeding continuation) and Klamer (RCT, null on 6-year IQ) is that post-discharge fortification of human milk does not clearly improve growth or neurodevelopment over unfortified human milk — a null-heavy picture that must be given full prominence rather than diluted by Marino's uncontrolled positive QI signal, which is the weakest-design study in this set. What the evidence does support, tentatively (Lamport), is that offering continued HMF rather than formula-based enrichment at discharge may help sustain human-milk feeding rates — a different and arguably more actionable benefit than the growth/ND benefit that has not been demonstrated.
+
+## (e) UK level-3 NICU relevance
+
+A UK unit's decision to send an infant home on fortified breast milk should be framed to families honestly: the strongest available evidence (Zachariassen's RCT, Klamer's 6-year follow-up) does not show a growth or neurodevelopmental benefit from post-discharge fortification over unfortified breast milk, while more limited evidence (Lamport) suggests continuing HMF rather than switching to formula-based enrichment may help preserve breastfeeding continuation — a benefit worth discussing with families in its own right, distinct from any growth claim. Marino's UK QI experience is useful primarily for feasibility and safety reassurance (parents found it acceptable; no safety signal emerged) rather than as efficacy evidence.
