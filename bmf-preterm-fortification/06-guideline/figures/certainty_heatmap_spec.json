@@ -1,0 +1,77 @@
+{
+  "row_labels": [
+    "Short-term growth",
+    "NEC / mortality",
+    "Neurodevelopment"
+  ],
+  "severity_colors": [
+    "#C8E6C9",
+    "#FFF59D",
+    "#FFCC80",
+    "#EF9A9A",
+    "#E0E0E0"
+  ],
+  "severity_labels": [
+    "High certainty",
+    "Moderate certainty",
+    "Low certainty",
+    "Very low certainty",
+    "Not evaluable / no evidence"
+  ],
+  "groups": [
+    {
+      "label": "Well-studied",
+      "columns": [
+        "Routine\nVLBW",
+        "Extremely\npreterm <28wk"
+      ]
+    },
+    {
+      "label": "High-risk\n(extrapolated)",
+      "columns": [
+        "AEDF/\nREDF",
+        "SGA/IUGR\n(no AEDF)"
+      ]
+    },
+    {
+      "label": "Post-NEC/SIP\n(evidence absent)",
+      "columns": [
+        "Post-med\nNEC",
+        "Post-surg\nNEC/SIP"
+      ]
+    }
+  ],
+  "cells": {
+    "Routine\nVLBW": {
+      "Short-term growth": 1,
+      "NEC / mortality": 2,
+      "Neurodevelopment": 1
+    },
+    "Extremely\npreterm <28wk": {
+      "Short-term growth": 2,
+      "NEC / mortality": 2,
+      "Neurodevelopment": 3
+    },
+    "AEDF/\nREDF": {
+      "Short-term growth": 4,
+      "NEC / mortality": 4,
+      "Neurodevelopment": 4
+    },
+    "SGA/IUGR\n(no AEDF)": {
+      "Short-term growth": 4,
+      "NEC / mortality": 4,
+      "Neurodevelopment": 4
+    },
+    "Post-med\nNEC": {
+      "Short-term growth": 4,
+      "NEC / mortality": 3,
+      "Neurodevelopment": 4
+    },
+    "Post-surg\nNEC/SIP": {
+      "Short-term growth": 4,
+      "NEC / mortality": 4,
+      "Neurodevelopment": 4
+    }
+  },
+  "column_number_row": true
+}

@@ -1,0 +1,33 @@
+{
+  "figsize": [13.5, 15],
+  "xlim": [0, 14.5],
+  "ylim": [0, 14.8],
+  "nodes": [
+    {"id": "A", "x": 6.0, "y": 13.9, "w": 6.4, "h": 1.0, "label": "Preterm infant fed human\nmilk (MOM and/or donor milk)", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "bold": true, "size": 10},
+
+    {"id": "B", "x": 6.0, "y": 12.1, "w": 6.6, "h": 1.5, "label": "Antenatal AEDF/REDF OR\nDoppler-abnormal fetal\ngrowth restriction?", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 10},
+
+    {"id": "PathA", "x": 2.2, "y": 9.4, "w": 3.9, "h": 3.1, "label": "PATHWAY A\n\nNo fortification trial\nexists for this group.\n\nAwait full established\nfeeds + stability before\nstarting HMF.\n\n(GPP — see Domain 2)", "fill": "pink", "edge": "#C55A11", "textcolor": "#1F3864", "size": 8.6},
+
+    {"id": "DecNEC", "x": 8.6, "y": 9.4, "w": 4.9, "h": 1.7, "label": "Confirmed NEC or\nspontaneous intestinal\nperforation (SIP) this\nadmission?", "fill": "white", "edge": "#1F3864", "textcolor": "#1F3864", "size": 9.5},
+
+    {"id": "PathB", "x": 2.9, "y": 6.0, "w": 3.6, "h": 3.3, "label": "PATHWAY B\nSurgical NEC / SIP\n\nRestart feeds per unit\nsurgical/GI protocol.\n\nFortifier-reintroduction\ntiming has NO trial or\nguideline evidence.\n\n(GPP — see Domain 3)", "fill": "pink", "edge": "#C55A11", "textcolor": "#1F3864", "size": 8.3},
+
+    {"id": "PathC", "x": 7.0, "y": 6.0, "w": 3.6, "h": 3.3, "label": "PATHWAY C\nMedical NEC\n\nConsider feed restart\nonce portal-venous gas\nclears (~3 days; very\nlow certainty).\n\nFortifier timing not\nevidenced. (GPP)", "fill": "pink", "edge": "#C55A11", "textcolor": "#1F3864", "size": 8.3},
+
+    {"id": "PathD", "x": 11.7, "y": 6.1, "w": 3.1, "h": 2.5, "label": "PATHWAY D\n\nNo AEDF/REDF and\nno NEC/SIP\n\n→ Routine VLBW\nfortification pathway", "fill": "green", "edge": "#375623", "textcolor": "white", "bold": true, "size": 9},
+
+    {"id": "Terminal", "x": 11.7, "y": 3.0, "w": 3.5, "h": 2.7, "label": "See Box 1 in the\nguideline text:\n\nRoutine fortification\nchecklist — timing,\nproduct choice,\nmonitoring, discharge", "fill": "#BDD7EE", "edge": "#1F3864", "textcolor": "#1F3864", "size": 8.7}
+  ],
+  "edges": [
+    {"from": "A", "to": "B"},
+    {"from": "B", "to": ["PathA", "DecNEC"]},
+    {"from": "DecNEC", "to": ["PathB", "PathC", "PathD"]},
+    {"from": "PathD", "to": "Terminal"}
+  ],
+  "notes": [
+    {"x": 7.2, "y": 1.35, "text": "HMF = human/breast milk fortifier (generic term). \"BMF\" is reserved elsewhere in this guideline for bovine-derived fortifier only.", "italic": true, "size": 8.5},
+    {"x": 7.2, "y": 0.8, "text": "GPP = Good Practice Point: recommendation resting on clinical consensus/extrapolation because no direct trial evidence exists.", "italic": true, "size": 8.5},
+    {"x": 7.2, "y": 0.25, "text": "Source: bmf-preterm-fortification evidence review (49 PMID-verified studies), Domains 1-8. Not a substitute for individual clinical judgement.", "italic": true, "size": 8.5}
+  ]
+}
