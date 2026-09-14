@@ -28,6 +28,6 @@
   "notes": [
     {"x": 7.2, "y": 1.35, "text": "HMF = human/breast milk fortifier (generic term). \"BMF\" is reserved elsewhere in this guideline for bovine-derived fortifier only.", "italic": true, "size": 8.5},
     {"x": 7.2, "y": 0.8, "text": "GPP = Good Practice Point: recommendation resting on clinical consensus/extrapolation because no direct trial evidence exists.", "italic": true, "size": 8.5},
-    {"x": 7.2, "y": 0.25, "text": "Source: bmf-preterm-fortification evidence review (49 PMID-verified studies), Domains 1-8. Not a substitute for individual clinical judgement.", "italic": true, "size": 8.5}
+    {"x": 7.2, "y": 0.25, "text": "Source: bmf-preterm-fortification evidence review (50 PMID-verified studies), Domains 1-8. Not a substitute for individual clinical judgement.", "italic": true, "size": 8.5}
   ]
 }
