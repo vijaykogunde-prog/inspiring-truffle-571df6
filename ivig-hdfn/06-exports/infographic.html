@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IVIG for Neonatal HDFN — Evidence Infographic</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", "Arial", sans-serif;
+    color: #1F3864;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    page-break-after: always;
+    min-height: 265mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  h1 { font-size: 22pt; color: #1F3864; margin: 0 0 4pt 0; }
+  h2 { font-size: 15pt; color: #1F3864; margin: 0 0 10pt 0; border-bottom: 2px solid #1F3864; padding-bottom: 4pt;}
+  .subtitle { font-size: 11pt; color: #2E5FA3; margin: 0 0 18pt 0; }
+  .meta { font-size: 8.5pt; color: #808080; margin-top: 2pt; }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10pt;
+    margin-top: 8pt;
+  }
+  .stat-card {
+    border: 1.5px solid #1F3864;
+    border-radius: 8pt;
+    padding: 12pt 14pt;
+    background: #FAFBFD;
+  }
+  .stat-card.null { border-color: #1F3864; }
+  .stat-card.warn { border-color: #C55A11; background: #FBF3EC; }
+  .stat-card.danger { border-color: #C00000; background: #FDF0F0; }
+  .stat-card.ok { border-color: #548235; background: #F2F7EE; }
+  .stat-num { font-size: 20pt; font-weight: bold; color: #1F3864; line-height: 1.1; }
+  .stat-card.warn .stat-num { color: #C55A11; }
+  .stat-card.danger .stat-num { color: #C00000; }
+  .stat-card.ok .stat-num { color: #548235; }
+  .stat-label { font-size: 9.5pt; margin-top: 4pt; line-height: 1.35; }
+  .stat-source { font-size: 7.8pt; color: #808080; margin-top: 5pt; }
+
+  .fullfig { flex: 1; display: flex; align-items: center; justify-content: center; }
+  .fullfig img { max-width: 100%; max-height: 235mm; }
+
+  .takeaways { font-size: 10.5pt; line-height: 1.55; }
+  .takeaways li { margin-bottom: 7pt; }
+  .callout {
+    border-left: 4px solid #C00000;
+    background: #FDF0F0;
+    padding: 8pt 12pt;
+    font-size: 9.8pt;
+    margin: 10pt 0;
+  }
+  .footer { margin-top: auto; font-size: 8pt; color: #808080; padding-top: 8pt; border-top: 1px solid #ddd; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: Cover + headline stats -->
+<div class="page">
+  <h1>IVIG for Neonatal Alloimmune Haemolytic Disease</h1>
+  <div class="subtitle">Evidence at a glance — systematised narrative review, September 2026<br>
+  Imperial College Healthcare NHS Trust — Queen Charlotte's &amp; Chelsea and St Mary's Neonatal Units</div>
+
+  <div class="stat-grid">
+    <div class="stat-card null">
+      <div class="stat-num">0 of 2</div>
+      <div class="stat-label">Placebo-controlled, double-blind Rh trials under modern intensive phototherapy found any benefit of IVIG on exchange-transfusion rate.</div>
+      <div class="stat-source">Smits-Wintjens 2011 (PMID 21422084); Santos 2012 (PMID 22882285)</div>
+    </div>
+    <div class="stat-card warn">
+      <div class="stat-num">69% → 15%</div>
+      <div class="stat-label">Fall in control-arm exchange-transfusion rate from the earliest (1992) to the most recent (2012) Rh trial — explaining most of the apparent "IVIG effect" in older studies.</div>
+      <div class="stat-source">Domain A / cross-cutting.md §1</div>
+    </div>
+    <div class="stat-card danger">
+      <div class="stat-num">31.66 → null</div>
+      <div class="stat-label">The largest adjusted odds ratio for IVIG and necrotising enterocolitis (Figueras-Aloy 2009) did not replicate in the one study designed to control for confounding by indication (Li et al. 2022, n=1259).</div>
+      <div class="stat-source">PMID 19948572; PMID 35613867</div>
+    </div>
+    <div class="stat-card ok">
+      <div class="stat-num">No increase</div>
+      <div class="stat-label">In late anaemia or top-up transfusion requirement attributable to IVIG — both placebo-controlled RCTs found no significant difference vs. control.</div>
+      <div class="stat-source">Domain E (e)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">0 trials</div>
+      <div class="stat-label">Comparative studies of IVIG in Kell, anti-c, anti-E or DAT-negative ABO disease. No direct evidence exists for these groups on any outcome.</div>
+      <div class="stat-source">Domain B (d); Domain C (a)</div>
+    </div>
+    <div class="stat-card warn">
+      <div class="stat-num">2022 vs. 2010</div>
+      <div class="stat-label">AAP and an international expert panel revised IVIG guidance downward in 2022, citing the null trials and NEC signal. NICE CG98 shows no confirmed re-evaluation since 2010.</div>
+      <div class="stat-source">Domain F (b), (d)</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Full evidence base, GRADE ratings, and references: <em>ivig-hdfn/</em> project (03-synthesis/, 02-extraction/, 05-references/). This infographic summarises, and does not replace, the full unit guideline and evidence synthesis. Every figure is drawn from a PMID/DOI-verified source cited in the underlying documents.
+  </div>
+</div>
+
+<!-- PAGE 2: Decision flowchart -->
+<div class="page">
+  <h2>When to consider IVIG — decision pathway</h2>
+  <div class="fullfig"><img src="figures/ivig-decision-flowchart.png"></div>
+  <div class="footer">See unit guideline (<em>04-guideline/ivig-hdfn-unit-guideline-DRAFT.md</em>) §2–§6 for full thresholds, dosing, checklist and monitoring detail. This pathway summarises, and does not replace, that guideline.</div>
+</div>
+
+<!-- PAGE 3: Era timeline -->
+<div class="page">
+  <h2>Why the evidence looks contradictory: the era effect</h2>
+  <div class="fullfig"><img src="figures/era-timeline.png"></div>
+  <div class="footer">Source: Domain A (<em>03-synthesis/domain-A.md</em>) and cross-cutting synthesis §1. Only trials reporting a numeric control-arm rate are plotted; no value is estimated.</div>
+</div>
+
+<!-- PAGE 4: GRADE summary table -->
+<div class="page">
+  <h2>Certainty of the evidence, by outcome and clinical subgroup</h2>
+  <div class="fullfig"><img src="figures/grade-summary-table.png"></div>
+  <div class="footer">GRADE ratings per <em>03-synthesis/cross-cutting.md</em> summary-of-findings table. Blank cells mean no comparative study exists for that subgroup/outcome combination — not that safety or lack of effect has been demonstrated.</div>
+</div>
+
+<!-- PAGE 5: Key takeaways -->
+<div class="page">
+  <h2>Key take-aways for the unit guideline group</h2>
+  <ol class="takeaways">
+    <li><strong>IVIG's historical evidence base does not survive contemporary trial conditions.</strong> The two best-conducted Rh trials, under modern intensive phototherapy, found no benefit at all.</li>
+    <li><strong>ABO disease has a weaker case than Rh disease</strong>, not a smaller version of the same case — no low-risk-of-bias ABO trial has ever been conducted.</li>
+    <li><strong>The necrotising enterocolitis signal is real enough to monitor for, but not proven causal</strong> — the best-controlled study found no association once confounding by indication was addressed.</li>
+    <li><strong>IVIG must never delay a clinically indicated exchange transfusion</strong> — this is the one point of universal agreement across every guidance document and the trial evidence.</li>
+    <li><strong>DAT-negative ABO disease and non-Rh/ABO antibodies (Kell, anti-c, anti-E) are genuine evidence vacuums</strong>, not extrapolations from the main trial base — treat them as distinct unknowns requiring individual clinical judgement.</li>
+    <li><strong>Late anaemia surveillance should be applied to all HDN infants with significant haemolysis or IUT history</strong>, regardless of IVIG exposure — it is a feature of the disease, not the treatment.</li>
+    <li><strong>NICE CG98's evidence base should be directly re-verified</strong> before the unit guideline defaults to its wording — international bodies revised their recommendations in 2022 in ways NICE does not appear to have matched.</li>
+  </ol>
+
+  <div class="callout">
+    <strong>Two items must be resolved before the unit guideline is ratified:</strong> (1) direct verification of NICE CG98's underlying evidence citations, and (2) direct verification of current UK product SPCs (dosing, infusion rate, isoagglutinin content) for whichever IVIG brand is actually stocked. This review's access to nice.org.uk and medicines.org.uk was blocked; the figures used throughout are WebSearch-derived and flagged accordingly in the full guideline document.
+  </div>
+
+  <div class="footer">
+    Prepared from a systematised narrative evidence review completed 20 September 2026. Full search log, extraction table (56 studies), GRADE ratings, and 74 verified references are available in the accompanying <em>ivig-hdfn/</em> project folder. This is a DRAFT for consultant/guideline-group review, not a ratified Trust document.
+  </div>
+</div>
+
+</body>
+</html>
